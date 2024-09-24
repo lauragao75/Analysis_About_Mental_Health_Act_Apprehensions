@@ -1,6 +1,5 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "A Comprehensive Analysis of Mental Health Act Apprehensions in Toronto"
 author: "Zien Gao"
 thanks: "Code and data are available at: https://github.com/lauragao75/Analysis_About_Mental_Health_Act_Apprehensions"
 title: "A Comprehensive Analysis of Mental Health Act Apprehensions in Toronto"
