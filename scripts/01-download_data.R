@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Simulates dataset about Mental Health Act Apprehensions
+# Purpose: Download mental health apprehension data from opendatatoronto 
 # Author: Zien Gao
 # Date: 24 September 2024
 # Contact: lauragao75@gmail.com

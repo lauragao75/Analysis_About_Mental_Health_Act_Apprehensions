@@ -29,5 +29,5 @@ simulated_data <- tibble(
 )
 
 #### Write the simulated data to a CSV file ####
-write_csv(simulated_data, file = "simulated_data.csv")
+write_csv(simulated_data, "data/simulated_data/simulated_dataset.csv")
 
