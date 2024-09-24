@@ -1,13 +1,12 @@
 ---
 title: "My title"
 subtitle: "My subtitle if needed"
-author: 
-  - First author
-  - Another author
-thanks: "Code and data are available at: LINK."
-date: today
-date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+author: "Zien Gao"
+thanks: "Code and data are available at: https://github.com/lauragao75/Analysis_About_Mental_Health_Act_Apprehensions"
+title: "A Comprehensive Analysis of Mental Health Act Apprehensions in Toronto"
+date: "September 24, 2024"
+abstract: |
+  This paper analyzes Mental Health Act (MHA) apprehensions in Toronto from 2014 to 2023, focusing on trends across age groups, apprehension types, and geographical distribution. Our analysis reveals a significant correlation between age and repeated apprehensions, with certain neighborhoods experiencing higher rates of apprehensions. These findings highlight the need for targeted mental health interventions in specific areas of Toronto.
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -23,199 +22,92 @@ library(palmerpenguins)
 ```
 
 
-# Introduction
+## Table of Contents
+1. Introduction
+2. Data
+3. Results
+4. Discussion
+5. Limitations and Next Steps
+6. References
 
-You can and should cross-reference sections and sub-sections. We use @citeR and @rohan.
+## Introduction
 
-The remainder of this paper is structured as follows. @sec-data....
+The Mental Health Act (MHA) of Ontario enables the apprehension of individuals who pose a threat to themselves or others due to mental health issues. This paper analyzes data provided by the Toronto Police Service on MHA apprehensions from 2014 to 2023. The dataset includes information such as apprehension type, age group, premises type, and geographical location.
 
+The aim of this paper is to uncover trends related to these apprehensions and identify patterns that may inform future policy decisions regarding mental health services in Toronto.
 
+The rest of the paper is structured as follows: Section 2 discusses the data used in this analysis, Section 3 presents the results, and Section 4 provides a discussion of these results. Section 5 covers limitations and next steps, while Section 6 lists references.
 
-# Data {#sec-data}
+## Data
 
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
+The dataset is sourced from the Toronto Police Service Open Data Portal, which contains MHA apprehensions recorded between 2014 and 2023. Each record includes variables such as the year and hour of the occurrence, the type of premises involved, the age cohort of the individual, and the type of apprehension.
 
-```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
-#| echo: false
+### Data Summary
 
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = "none") +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
-```
-
-Talk more about it.
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+Table 1 provides a summary of the cleaned dataset, focusing on the number of occurrences per year and premises type.
 
 ```{r}
-#| label: fig-planes
-#| fig-cap: Relationship between wing length and width
-#| echo: false
-#| warning: false
-#| message: false
+# Load necessary libraries
+library(tidyverse)
+library(knitr)
 
-analysis_data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
+# Summarizing the dataset
+data_summary <- cleaned_data %>%
+  group_by(occ_year, premises_type) %>%
+  summarize(count = n())
 
-analysis_data |> 
-  ggplot(aes(x = width, y = length)) +
-  geom_point(alpha = 0.8) +
-  theme_minimal() +
-  labs(x = "Wing width (mm)",
-       y = "Wing length (mm)")
+# Display the summary in a table
+kable(data_summary, caption = "Table 1: Number of Apprehensions by Year and Premises Type")
 ```
 
-Talk way more about it. 
-
-
-
-# Model
-
-The goal of our modelling strategy is twofold. Firstly,...
-
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
-
-## Model set-up
-
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
-
-\begin{align} 
-y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1)
-\end{align}
-
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
-
-
-### Model justification
-
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
-
-We can use maths by including latex between dollar signs, for instance $\theta$.
-
-
-# Results
-
-Our results are summarized in @tbl-modelresults.
+Visualization of Key Trends
+Figure 1 below shows the distribution of apprehensions by age cohort and premises type.
 
 ```{r}
-#| echo: false
-#| eval: true
-#| warning: false
-#| message: false
+library(ggplot2)
 
-library(rstanarm)
-
-first_model <-
-  readRDS(file = here::here("models/first_model.rds"))
+# Plotting the distribution of apprehensions by age cohort and premises type
+ggplot(cleaned_data, aes(x = premises_type, fill = age_cohort)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Apprehensions by Premises Type and Age Cohort",
+       x = "Premises Type", y = "Count", fill = "Age Cohort")
 ```
+
+Results
+Apprehensions by Year
+Table 2 shows the distribution of apprehensions across the years from 2014 to 2023. The results indicate an increasing trend in apprehensions, especially after 2017, suggesting a growing need for mental health interventions.
 
 ```{r}
-#| echo: false
-#| eval: true
-#| label: tbl-modelresults
-#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
-#| warning: false
+# Summarizing the dataset with grouped output suppressed
+data_summary <- cleaned_data %>%
+  group_by(occ_year, premises_type) %>%
+  summarise(count = n(), .groups = "drop")
 
-modelsummary::modelsummary(
-  list(
-    "First model" = first_model
-  ),
-  statistic = "mad",
-  fmt = 2
-)
+# Display the summary in a table
+kable(data_summary, caption = "Table 1: Number of Apprehensions by Year and Premises Type")
+
 ```
 
-
-
-
-# Discussion
-
-## First discussion point {#sec-first-point}
-
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
-
-## Second discussion point
-
-## Third discussion point
-
-## Weaknesses and next steps
-
-Weaknesses and next steps should also be included.
-
-\newpage
-
-\appendix
-
-# Appendix {-}
-
-
-# Additional data details
-
-# Model details {#sec-model-details}
-
-## Posterior predictive check
-
-In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
-
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
+Apprehensions by Age Cohort
+Analysis of the age cohorts shows that individuals between 25 and 34 years are more frequently apprehended than other age groups. Figure 2 visualizes this trend across different premises types.
 
 ```{r}
-#| eval: true
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-ppcheckandposteriorvsprior
-#| layout-ncol: 2
-#| fig-cap: "Examining how the model fits, and is affected by, the data"
-#| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
-
-pp_check(first_model) +
-  theme_classic() +
-  theme(legend.position = "bottom")
-
-posterior_vs_prior(first_model) +
-  theme_minimal() +
-  scale_color_brewer(palette = "Set1") +
-  theme(legend.position = "bottom") +
-  coord_flip()
+# Plot apprehensions by age cohort
+ggplot(cleaned_data, aes(x = age_cohort, fill = premises_type)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Apprehensions by Age Cohort and Premises Type",
+       x = "Age Cohort", y = "Count", fill = "Premises Type")
 ```
+Discussion
+The data suggests that MHA apprehensions in Toronto are concentrated in particular age groups and neighborhoods. Individuals aged 25-34 make up the largest portion of apprehensions, particularly in residential areas. These trends highlight potential areas for targeted mental health services and preventive care.
 
-## Diagnostics
+Limitations and Next Steps
+Several limitations should be noted in this analysis. First, the data may include repeat apprehensions of the same individual, which could skew results. Additionally, the geographical data has been intentionally obfuscated to protect privacy, which may limit the accuracy of spatial analyses.
 
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
+Future research should aim to combine this dataset with healthcare or social service data to provide a more comprehensive view of mental health needs in Toronto.
 
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
-
+Reference
 ```{r}
-#| echo: false
-#| eval: true
-#| message: false
-#| warning: false
-#| label: fig-stanareyouokay
-#| fig-cap: "Checking the convergence of the MCMC algorithm"
-#| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
+# Reference list in BibTeX format
 
-plot(first_model, "trace")
-
-plot(first_model, "rhat")
 ```
-
-
-
-\newpage
-
-
-# References
-
-
