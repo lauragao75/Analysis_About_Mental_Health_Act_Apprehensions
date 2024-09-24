@@ -1,0 +1,1001 @@
+occ_year,occ_hour,premises_type,age_cohort
+2014,17,Apartment,18 to 24
+2021,14,Commercial,45 to 54
+2019,22,Apartment,35 to 44
+2022,11,Commercial,18 to 24
+2016,14,Apartment,55 to 64
+2012,16,House,45 to 54
+2018,23,House,35 to 44
+2023,12,Apartment,55 to 64
+2011,4,House,65+
+2021,19,Commercial,25 to 34
+2021,18,House,45 to 54
+2024,1,Apartment,55 to 64
+2016,3,Outside,18 to 24
+2011,19,Apartment,65+
+2015,3,Apartment,65+
+2010,17,House,18 to 24
+2011,8,Commercial,35 to 44
+2012,20,Outside,65+
+2012,19,Commercial,35 to 44
+2023,21,Apartment,65+
+2018,10,Apartment,35 to 44
+2017,10,Apartment,18 to 24
+2020,3,House,55 to 64
+2020,18,House,25 to 34
+2018,10,Commercial,65+
+2019,3,House,18 to 24
+2017,23,Commercial,45 to 54
+2010,20,Commercial,45 to 54
+2023,10,House,25 to 34
+2024,4,House,55 to 64
+2015,6,Commercial,45 to 54
+2011,10,House,18 to 24
+2015,22,Commercial,65+
+2012,23,Outside,25 to 34
+2023,1,Apartment,45 to 54
+2010,22,House,25 to 34
+2019,4,Commercial,55 to 64
+2019,16,House,18 to 24
+2010,5,Commercial,55 to 64
+2021,22,Outside,55 to 64
+2015,13,Commercial,55 to 64
+2010,0,House,35 to 44
+2018,0,House,18 to 24
+2014,1,House,18 to 24
+2018,2,Outside,45 to 54
+2019,21,House,25 to 34
+2018,15,Commercial,65+
+2018,13,House,18 to 24
+2015,18,House,35 to 44
+2024,23,Outside,18 to 24
+2020,7,Apartment,35 to 44
+2014,14,Apartment,65+
+2013,21,Commercial,18 to 24
+2011,9,House,25 to 34
+2021,22,Commercial,45 to 54
+2019,16,House,65+
+2022,7,Apartment,45 to 54
+2010,18,House,25 to 34
+2023,22,Commercial,65+
+2010,17,House,35 to 44
+2023,5,Apartment,18 to 24
+2020,21,Outside,55 to 64
+2014,13,Outside,45 to 54
+2024,14,Outside,18 to 24
+2023,2,Outside,35 to 44
+2023,13,Apartment,55 to 64
+2015,16,House,25 to 34
+2011,7,Apartment,65+
+2024,12,Apartment,55 to 64
+2013,9,House,65+
+2020,18,Apartment,55 to 64
+2021,19,Apartment,45 to 54
+2015,5,House,25 to 34
+2019,9,Commercial,35 to 44
+2023,6,Apartment,55 to 64
+2019,1,Commercial,45 to 54
+2015,8,House,45 to 54
+2011,20,Apartment,45 to 54
+2017,14,Apartment,65+
+2021,18,House,35 to 44
+2022,2,House,55 to 64
+2022,8,House,45 to 54
+2014,14,House,18 to 24
+2019,17,Commercial,25 to 34
+2013,7,Commercial,35 to 44
+2024,21,Apartment,65+
+2019,4,House,45 to 54
+2024,12,House,65+
+2021,1,Apartment,25 to 34
+2010,5,Commercial,25 to 34
+2012,23,Outside,25 to 34
+2022,17,House,65+
+2024,13,Commercial,65+
+2024,18,Outside,55 to 64
+2017,5,Outside,55 to 64
+2022,22,Commercial,25 to 34
+2024,15,Commercial,45 to 54
+2021,23,Apartment,35 to 44
+2017,21,Outside,25 to 34
+2012,6,Outside,45 to 54
+2017,16,House,65+
+2020,14,Apartment,35 to 44
+2010,7,Outside,45 to 54
+2021,12,House,25 to 34
+2011,10,House,25 to 34
+2017,20,Apartment,25 to 34
+2023,6,Apartment,55 to 64
+2024,8,Outside,55 to 64
+2024,18,House,65+
+2019,10,Commercial,35 to 44
+2012,4,Apartment,45 to 54
+2011,0,Apartment,65+
+2010,0,House,35 to 44
+2020,4,House,65+
+2016,23,Commercial,65+
+2022,16,Commercial,25 to 34
+2011,10,Commercial,25 to 34
+2013,19,Outside,35 to 44
+2019,18,Outside,25 to 34
+2014,16,Outside,55 to 64
+2021,11,Apartment,18 to 24
+2010,16,House,25 to 34
+2012,21,Apartment,35 to 44
+2014,13,House,45 to 54
+2016,8,Apartment,18 to 24
+2018,7,Commercial,18 to 24
+2020,23,Commercial,25 to 34
+2020,9,Apartment,18 to 24
+2023,14,House,18 to 24
+2013,11,Outside,65+
+2014,20,House,18 to 24
+2018,6,Outside,45 to 54
+2016,18,Outside,45 to 54
+2021,0,Commercial,25 to 34
+2016,10,Outside,35 to 44
+2016,17,Commercial,35 to 44
+2016,3,Apartment,45 to 54
+2021,4,Apartment,65+
+2017,12,Commercial,55 to 64
+2014,5,House,55 to 64
+2024,2,Commercial,18 to 24
+2014,19,Commercial,25 to 34
+2019,17,Commercial,18 to 24
+2023,7,House,55 to 64
+2020,23,Apartment,65+
+2016,17,Outside,55 to 64
+2015,17,Commercial,25 to 34
+2021,17,Apartment,45 to 54
+2024,5,Outside,25 to 34
+2015,15,Commercial,45 to 54
+2019,1,Commercial,18 to 24
+2018,3,Commercial,45 to 54
+2024,15,Commercial,35 to 44
+2024,16,House,65+
+2011,11,Commercial,45 to 54
+2011,19,Apartment,65+
+2013,7,Commercial,18 to 24
+2012,13,Apartment,35 to 44
+2024,13,Outside,18 to 24
+2010,10,Commercial,18 to 24
+2018,3,Outside,65+
+2018,1,House,45 to 54
+2021,11,Outside,25 to 34
+2013,8,House,35 to 44
+2016,10,Outside,18 to 24
+2016,4,Commercial,55 to 64
+2022,0,Outside,45 to 54
+2024,23,Commercial,45 to 54
+2021,19,Outside,45 to 54
+2018,17,Outside,25 to 34
+2021,0,Outside,65+
+2024,8,House,55 to 64
+2015,9,Apartment,18 to 24
+2010,9,Apartment,25 to 34
+2011,13,Commercial,35 to 44
+2022,3,Outside,18 to 24
+2018,1,Commercial,18 to 24
+2013,2,Commercial,35 to 44
+2018,17,Commercial,25 to 34
+2018,22,Commercial,35 to 44
+2023,21,Apartment,25 to 34
+2017,2,Outside,25 to 34
+2016,18,Apartment,18 to 24
+2024,18,House,35 to 44
+2024,23,Apartment,35 to 44
+2017,12,Commercial,45 to 54
+2016,4,Outside,35 to 44
+2012,5,Outside,18 to 24
+2015,4,Outside,25 to 34
+2020,4,Apartment,18 to 24
+2024,3,House,25 to 34
+2015,12,Apartment,55 to 64
+2023,3,Apartment,65+
+2022,23,Apartment,65+
+2016,16,House,55 to 64
+2014,5,Commercial,65+
+2010,2,Commercial,45 to 54
+2024,19,Commercial,25 to 34
+2011,1,House,25 to 34
+2022,16,Apartment,45 to 54
+2016,23,Outside,18 to 24
+2022,1,Commercial,25 to 34
+2022,1,House,55 to 64
+2020,14,Apartment,55 to 64
+2020,10,Commercial,55 to 64
+2013,8,Commercial,45 to 54
+2024,19,Commercial,25 to 34
+2012,11,Outside,45 to 54
+2022,2,Outside,35 to 44
+2019,2,Commercial,18 to 24
+2022,4,Apartment,35 to 44
+2010,1,Outside,18 to 24
+2018,5,Apartment,55 to 64
+2022,17,Outside,18 to 24
+2011,23,House,25 to 34
+2020,13,Outside,65+
+2024,14,House,18 to 24
+2024,17,Outside,55 to 64
+2024,18,Apartment,35 to 44
+2020,2,House,45 to 54
+2021,4,House,18 to 24
+2020,12,House,35 to 44
+2018,2,House,45 to 54
+2013,9,Outside,35 to 44
+2014,23,House,35 to 44
+2015,6,Outside,25 to 34
+2018,9,House,18 to 24
+2014,5,House,25 to 34
+2010,0,Apartment,25 to 34
+2011,19,Outside,25 to 34
+2020,5,House,65+
+2021,14,Outside,65+
+2014,23,Commercial,45 to 54
+2010,2,Outside,65+
+2022,18,Outside,45 to 54
+2010,2,Commercial,25 to 34
+2016,7,Commercial,25 to 34
+2011,20,Outside,65+
+2012,2,Commercial,65+
+2017,7,House,65+
+2024,21,Commercial,55 to 64
+2022,18,House,25 to 34
+2012,20,House,18 to 24
+2023,21,Apartment,45 to 54
+2019,11,Apartment,35 to 44
+2018,6,Commercial,65+
+2013,5,Apartment,25 to 34
+2021,12,House,35 to 44
+2014,23,Apartment,25 to 34
+2019,17,Commercial,18 to 24
+2017,10,Apartment,25 to 34
+2012,1,Apartment,18 to 24
+2021,9,House,65+
+2018,23,Outside,35 to 44
+2013,16,Outside,35 to 44
+2012,20,Outside,65+
+2020,14,Apartment,35 to 44
+2019,3,Apartment,45 to 54
+2023,13,Commercial,65+
+2010,15,Outside,25 to 34
+2024,19,Outside,35 to 44
+2021,14,House,25 to 34
+2011,6,Commercial,55 to 64
+2014,15,Commercial,65+
+2010,7,Apartment,18 to 24
+2010,18,Outside,45 to 54
+2018,2,Commercial,65+
+2020,18,Commercial,55 to 64
+2021,16,Outside,65+
+2011,16,Commercial,45 to 54
+2018,1,Outside,45 to 54
+2015,9,Commercial,65+
+2014,15,Outside,35 to 44
+2018,19,Outside,45 to 54
+2023,8,House,18 to 24
+2013,1,Apartment,25 to 34
+2015,7,Commercial,45 to 54
+2024,11,Outside,18 to 24
+2023,11,Outside,25 to 34
+2014,1,House,18 to 24
+2012,15,Outside,45 to 54
+2024,14,Commercial,35 to 44
+2021,1,Outside,18 to 24
+2021,0,Apartment,45 to 54
+2022,6,Commercial,55 to 64
+2023,6,Apartment,18 to 24
+2021,6,Apartment,25 to 34
+2020,22,House,45 to 54
+2012,7,Apartment,25 to 34
+2018,22,House,45 to 54
+2014,10,Apartment,55 to 64
+2016,0,House,45 to 54
+2014,21,Commercial,45 to 54
+2018,16,House,65+
+2020,18,Apartment,18 to 24
+2017,1,House,55 to 64
+2018,11,House,35 to 44
+2016,19,Commercial,25 to 34
+2015,20,Outside,45 to 54
+2013,20,Commercial,45 to 54
+2018,16,Outside,18 to 24
+2024,21,Commercial,45 to 54
+2011,0,Outside,45 to 54
+2019,2,House,18 to 24
+2012,12,Commercial,25 to 34
+2020,0,Commercial,18 to 24
+2014,1,Outside,65+
+2021,20,Commercial,35 to 44
+2016,21,Outside,25 to 34
+2022,20,House,55 to 64
+2011,9,Commercial,65+
+2020,15,House,65+
+2018,4,Apartment,18 to 24
+2012,17,Outside,65+
+2010,21,Apartment,55 to 64
+2016,5,Apartment,25 to 34
+2020,19,Apartment,45 to 54
+2014,7,House,45 to 54
+2024,18,House,25 to 34
+2021,7,Commercial,25 to 34
+2018,13,Commercial,65+
+2016,0,House,45 to 54
+2014,20,Outside,18 to 24
+2018,6,Apartment,45 to 54
+2022,17,House,65+
+2012,11,Apartment,45 to 54
+2023,12,Apartment,35 to 44
+2022,8,Apartment,35 to 44
+2024,15,House,18 to 24
+2020,7,Outside,65+
+2013,19,Apartment,25 to 34
+2013,23,Apartment,25 to 34
+2013,6,Commercial,18 to 24
+2018,0,Outside,65+
+2013,16,Commercial,65+
+2010,2,House,35 to 44
+2010,1,Apartment,45 to 54
+2010,20,Outside,65+
+2024,18,Commercial,35 to 44
+2013,16,Commercial,65+
+2020,15,Outside,18 to 24
+2021,14,Apartment,65+
+2017,21,House,35 to 44
+2024,12,Apartment,35 to 44
+2021,10,Apartment,65+
+2011,18,Outside,65+
+2012,2,House,65+
+2011,15,House,18 to 24
+2023,3,Commercial,18 to 24
+2024,21,Commercial,25 to 34
+2013,15,Outside,55 to 64
+2010,14,House,45 to 54
+2023,17,Commercial,18 to 24
+2024,15,Apartment,45 to 54
+2023,1,House,25 to 34
+2011,16,Commercial,65+
+2021,17,Apartment,18 to 24
+2022,5,Commercial,65+
+2023,11,Apartment,25 to 34
+2017,11,Commercial,35 to 44
+2012,1,Outside,55 to 64
+2019,18,Outside,25 to 34
+2019,8,Commercial,18 to 24
+2024,22,House,25 to 34
+2022,11,House,45 to 54
+2012,5,House,55 to 64
+2021,22,Commercial,25 to 34
+2020,3,Apartment,18 to 24
+2012,9,Apartment,45 to 54
+2013,9,Apartment,25 to 34
+2013,2,Commercial,65+
+2019,15,Commercial,65+
+2016,22,Commercial,18 to 24
+2010,20,House,65+
+2019,10,Apartment,18 to 24
+2014,9,Commercial,35 to 44
+2017,17,House,45 to 54
+2017,9,Commercial,65+
+2017,17,Apartment,18 to 24
+2015,7,Apartment,55 to 64
+2019,11,Apartment,45 to 54
+2014,18,Commercial,35 to 44
+2020,15,Apartment,45 to 54
+2013,16,House,18 to 24
+2024,19,Outside,18 to 24
+2018,9,Apartment,45 to 54
+2024,8,Outside,35 to 44
+2014,1,Outside,18 to 24
+2012,12,Outside,18 to 24
+2017,11,Apartment,25 to 34
+2014,17,Outside,25 to 34
+2013,15,Commercial,45 to 54
+2020,13,House,65+
+2014,5,Apartment,35 to 44
+2015,16,Commercial,18 to 24
+2010,22,Outside,55 to 64
+2011,8,Commercial,65+
+2013,10,Outside,55 to 64
+2016,20,Commercial,55 to 64
+2010,4,Commercial,18 to 24
+2020,14,Apartment,18 to 24
+2022,11,Outside,18 to 24
+2019,22,House,18 to 24
+2015,20,Outside,45 to 54
+2014,22,Outside,55 to 64
+2010,6,Commercial,18 to 24
+2010,17,House,25 to 34
+2024,9,House,25 to 34
+2019,12,Commercial,65+
+2024,1,Apartment,18 to 24
+2010,2,Outside,55 to 64
+2016,1,Outside,65+
+2022,5,Apartment,25 to 34
+2022,4,Apartment,25 to 34
+2013,11,Commercial,45 to 54
+2011,1,Apartment,65+
+2022,17,House,18 to 24
+2010,4,House,25 to 34
+2010,0,Outside,65+
+2024,1,Outside,45 to 54
+2010,22,Outside,18 to 24
+2010,9,House,35 to 44
+2024,16,Apartment,18 to 24
+2019,7,House,55 to 64
+2013,4,House,18 to 24
+2013,20,Commercial,25 to 34
+2015,22,Outside,45 to 54
+2022,21,Apartment,25 to 34
+2018,22,Commercial,25 to 34
+2010,21,Commercial,55 to 64
+2017,6,Commercial,45 to 54
+2010,17,Apartment,35 to 44
+2015,22,Outside,55 to 64
+2022,22,Commercial,18 to 24
+2012,23,House,25 to 34
+2020,21,Outside,65+
+2016,14,Apartment,35 to 44
+2014,8,Commercial,25 to 34
+2022,9,Outside,25 to 34
+2019,21,House,45 to 54
+2024,15,Outside,55 to 64
+2014,5,House,65+
+2016,2,Outside,55 to 64
+2019,9,Outside,65+
+2012,4,Apartment,55 to 64
+2011,8,Commercial,18 to 24
+2020,11,Commercial,18 to 24
+2014,21,Commercial,55 to 64
+2020,1,Outside,65+
+2023,4,Apartment,45 to 54
+2010,4,Commercial,25 to 34
+2016,4,Outside,35 to 44
+2022,6,House,45 to 54
+2021,0,House,55 to 64
+2015,3,House,55 to 64
+2015,3,Outside,25 to 34
+2024,14,House,35 to 44
+2021,23,Apartment,45 to 54
+2021,12,Apartment,55 to 64
+2018,2,Apartment,25 to 34
+2010,22,Commercial,25 to 34
+2013,10,Apartment,18 to 24
+2015,19,House,65+
+2016,23,House,55 to 64
+2020,4,House,25 to 34
+2018,12,Commercial,25 to 34
+2013,14,Commercial,25 to 34
+2011,2,Commercial,35 to 44
+2020,19,House,25 to 34
+2018,10,Apartment,45 to 54
+2018,2,Outside,45 to 54
+2010,22,Outside,45 to 54
+2018,16,House,18 to 24
+2021,1,Commercial,35 to 44
+2016,19,House,35 to 44
+2023,4,Apartment,45 to 54
+2011,16,House,55 to 64
+2017,17,Commercial,65+
+2017,1,House,45 to 54
+2018,15,House,35 to 44
+2011,6,House,25 to 34
+2015,16,House,65+
+2010,11,Outside,65+
+2022,15,Apartment,18 to 24
+2016,2,House,35 to 44
+2011,23,House,45 to 54
+2014,21,House,18 to 24
+2021,4,Outside,35 to 44
+2012,21,House,55 to 64
+2022,22,Apartment,18 to 24
+2010,13,Outside,18 to 24
+2019,8,Commercial,25 to 34
+2011,10,Outside,18 to 24
+2010,18,Apartment,35 to 44
+2011,7,House,25 to 34
+2018,16,House,18 to 24
+2013,2,Commercial,35 to 44
+2023,1,Apartment,45 to 54
+2015,13,House,18 to 24
+2022,16,Apartment,25 to 34
+2020,22,Outside,45 to 54
+2013,16,House,18 to 24
+2022,21,Commercial,25 to 34
+2011,14,Apartment,18 to 24
+2019,15,Outside,25 to 34
+2010,16,Apartment,35 to 44
+2012,20,Apartment,55 to 64
+2011,0,Commercial,55 to 64
+2011,13,Outside,45 to 54
+2020,1,Commercial,35 to 44
+2011,16,Outside,25 to 34
+2022,16,Apartment,55 to 64
+2011,3,Outside,25 to 34
+2014,7,Apartment,35 to 44
+2013,9,Outside,65+
+2023,11,Commercial,25 to 34
+2013,3,Commercial,45 to 54
+2011,20,Commercial,45 to 54
+2010,22,House,35 to 44
+2016,20,Apartment,18 to 24
+2011,3,Outside,25 to 34
+2010,18,House,18 to 24
+2015,14,Commercial,65+
+2014,6,Commercial,35 to 44
+2014,23,Outside,25 to 34
+2010,15,Outside,25 to 34
+2020,14,Commercial,65+
+2017,22,Outside,25 to 34
+2014,13,Outside,65+
+2013,14,Commercial,55 to 64
+2014,23,Commercial,25 to 34
+2013,1,Outside,65+
+2022,9,Apartment,55 to 64
+2016,4,Apartment,45 to 54
+2017,17,House,18 to 24
+2019,22,House,45 to 54
+2023,5,Commercial,55 to 64
+2013,21,House,35 to 44
+2010,10,House,65+
+2023,20,Apartment,25 to 34
+2015,1,Outside,65+
+2022,4,Apartment,65+
+2014,2,House,45 to 54
+2020,9,Outside,45 to 54
+2016,15,Apartment,35 to 44
+2014,5,Apartment,35 to 44
+2015,2,Outside,35 to 44
+2018,11,Outside,65+
+2012,14,Commercial,55 to 64
+2018,23,House,18 to 24
+2013,4,House,45 to 54
+2014,1,House,18 to 24
+2021,10,House,35 to 44
+2011,11,Outside,18 to 24
+2014,6,Apartment,65+
+2012,20,Commercial,25 to 34
+2024,21,Outside,65+
+2022,14,Commercial,65+
+2024,18,Outside,65+
+2021,13,House,18 to 24
+2022,5,Outside,65+
+2024,7,Apartment,35 to 44
+2016,13,Commercial,18 to 24
+2016,1,House,25 to 34
+2019,20,Apartment,45 to 54
+2020,12,Commercial,55 to 64
+2015,11,Outside,25 to 34
+2023,11,House,45 to 54
+2017,18,Apartment,35 to 44
+2018,0,Commercial,18 to 24
+2011,5,Apartment,18 to 24
+2021,0,Outside,65+
+2020,6,House,18 to 24
+2024,16,Apartment,25 to 34
+2015,19,Commercial,18 to 24
+2013,9,Apartment,25 to 34
+2010,12,Apartment,18 to 24
+2018,7,Outside,65+
+2015,8,Outside,65+
+2019,21,Outside,65+
+2016,5,Commercial,65+
+2024,20,Outside,45 to 54
+2010,4,Apartment,65+
+2022,0,House,65+
+2010,15,Apartment,35 to 44
+2015,6,House,55 to 64
+2011,22,Outside,25 to 34
+2018,15,Outside,25 to 34
+2012,0,Apartment,55 to 64
+2012,19,Apartment,35 to 44
+2015,9,Commercial,18 to 24
+2022,8,Apartment,55 to 64
+2022,12,House,25 to 34
+2020,21,Commercial,25 to 34
+2015,20,Apartment,35 to 44
+2015,6,House,65+
+2012,12,House,45 to 54
+2018,22,Commercial,55 to 64
+2024,16,Outside,55 to 64
+2018,4,Commercial,45 to 54
+2010,21,Outside,25 to 34
+2018,21,House,35 to 44
+2015,5,Outside,65+
+2021,6,Outside,55 to 64
+2013,18,Outside,65+
+2016,14,Commercial,25 to 34
+2013,15,Commercial,25 to 34
+2020,3,Apartment,35 to 44
+2017,19,House,35 to 44
+2010,10,Outside,65+
+2010,14,Commercial,45 to 54
+2018,8,Apartment,65+
+2021,18,Outside,35 to 44
+2012,19,Commercial,45 to 54
+2018,22,Outside,18 to 24
+2010,3,House,65+
+2023,22,House,55 to 64
+2010,6,House,25 to 34
+2016,11,Outside,25 to 34
+2017,12,Commercial,18 to 24
+2022,6,Outside,35 to 44
+2015,17,Commercial,18 to 24
+2013,5,Outside,55 to 64
+2019,2,Outside,18 to 24
+2019,21,Apartment,35 to 44
+2016,16,House,45 to 54
+2019,8,House,35 to 44
+2011,6,Apartment,35 to 44
+2016,20,House,45 to 54
+2017,9,Apartment,65+
+2020,5,Outside,18 to 24
+2015,1,Outside,65+
+2015,7,Commercial,35 to 44
+2010,7,House,18 to 24
+2012,10,Outside,25 to 34
+2016,7,House,65+
+2024,19,Outside,55 to 64
+2010,10,Apartment,25 to 34
+2022,1,Outside,25 to 34
+2020,8,Outside,35 to 44
+2012,15,House,35 to 44
+2022,6,House,35 to 44
+2015,20,Commercial,45 to 54
+2016,18,Apartment,35 to 44
+2013,0,House,65+
+2020,10,Commercial,35 to 44
+2021,15,Commercial,65+
+2018,15,Apartment,65+
+2024,8,House,18 to 24
+2014,9,House,18 to 24
+2020,11,House,35 to 44
+2019,20,Outside,45 to 54
+2015,15,Outside,65+
+2016,19,Commercial,55 to 64
+2019,19,Commercial,35 to 44
+2012,21,Apartment,18 to 24
+2024,19,Outside,55 to 64
+2023,21,Outside,18 to 24
+2024,20,Commercial,45 to 54
+2022,0,Outside,45 to 54
+2012,14,House,45 to 54
+2023,12,Outside,25 to 34
+2016,1,Commercial,55 to 64
+2016,2,Apartment,65+
+2011,9,Apartment,18 to 24
+2016,10,Apartment,25 to 34
+2023,5,House,45 to 54
+2019,9,House,18 to 24
+2018,12,Apartment,25 to 34
+2016,7,Commercial,18 to 24
+2018,8,Apartment,65+
+2018,19,Apartment,45 to 54
+2011,18,Commercial,18 to 24
+2018,11,Commercial,55 to 64
+2020,5,Commercial,35 to 44
+2020,5,House,35 to 44
+2023,4,House,35 to 44
+2013,4,Commercial,25 to 34
+2021,12,Apartment,18 to 24
+2011,8,Commercial,45 to 54
+2023,9,Commercial,18 to 24
+2018,18,Apartment,25 to 34
+2010,9,Commercial,45 to 54
+2015,20,Outside,25 to 34
+2016,20,House,35 to 44
+2018,15,Commercial,65+
+2022,12,Outside,35 to 44
+2015,3,Outside,25 to 34
+2012,18,Apartment,55 to 64
+2017,9,Outside,25 to 34
+2014,15,House,35 to 44
+2011,14,House,55 to 64
+2013,4,Apartment,55 to 64
+2022,17,Outside,18 to 24
+2018,14,Apartment,35 to 44
+2021,4,Outside,25 to 34
+2021,8,House,45 to 54
+2015,0,Outside,18 to 24
+2014,13,House,65+
+2012,14,House,18 to 24
+2011,5,Commercial,45 to 54
+2019,4,House,25 to 34
+2024,12,House,25 to 34
+2016,23,Commercial,45 to 54
+2018,6,Commercial,55 to 64
+2016,1,Commercial,45 to 54
+2017,10,Commercial,35 to 44
+2014,12,Apartment,25 to 34
+2019,14,Outside,18 to 24
+2011,20,Outside,45 to 54
+2020,23,House,18 to 24
+2011,15,Outside,55 to 64
+2018,2,Apartment,35 to 44
+2024,8,Commercial,18 to 24
+2013,16,Apartment,35 to 44
+2011,16,House,18 to 24
+2018,5,Apartment,35 to 44
+2010,23,Outside,35 to 44
+2012,19,Commercial,25 to 34
+2011,14,House,65+
+2014,21,House,18 to 24
+2018,3,House,35 to 44
+2014,11,Commercial,35 to 44
+2022,17,Outside,45 to 54
+2022,19,House,55 to 64
+2024,21,House,25 to 34
+2022,7,Commercial,35 to 44
+2018,18,Apartment,25 to 34
+2012,5,Apartment,55 to 64
+2011,7,Outside,55 to 64
+2017,16,Apartment,25 to 34
+2018,7,Commercial,65+
+2010,2,Commercial,25 to 34
+2022,12,Apartment,55 to 64
+2013,19,House,35 to 44
+2011,17,Apartment,35 to 44
+2021,18,Commercial,18 to 24
+2015,23,Commercial,65+
+2019,18,House,55 to 64
+2022,10,House,45 to 54
+2011,16,Outside,55 to 64
+2013,7,Apartment,55 to 64
+2024,10,House,45 to 54
+2023,12,Commercial,45 to 54
+2013,19,Commercial,35 to 44
+2021,14,Outside,65+
+2022,1,Commercial,18 to 24
+2024,22,Apartment,55 to 64
+2023,10,Outside,18 to 24
+2013,5,House,35 to 44
+2014,23,House,65+
+2018,11,Outside,55 to 64
+2012,5,House,25 to 34
+2021,18,Commercial,35 to 44
+2016,20,Apartment,45 to 54
+2011,6,Apartment,25 to 34
+2019,18,Commercial,18 to 24
+2024,12,House,65+
+2020,7,Apartment,55 to 64
+2012,21,Outside,25 to 34
+2010,13,Outside,55 to 64
+2015,3,House,45 to 54
+2020,1,Apartment,18 to 24
+2020,22,Outside,65+
+2021,12,Apartment,55 to 64
+2019,15,Outside,18 to 24
+2021,8,House,65+
+2010,1,House,35 to 44
+2020,19,Outside,25 to 34
+2023,15,House,35 to 44
+2010,9,Commercial,65+
+2023,3,House,25 to 34
+2017,14,Commercial,18 to 24
+2020,6,Apartment,35 to 44
+2017,0,House,18 to 24
+2013,14,House,18 to 24
+2021,15,Outside,65+
+2012,9,Apartment,45 to 54
+2020,7,Apartment,55 to 64
+2013,13,Outside,18 to 24
+2016,12,House,25 to 34
+2018,0,Outside,65+
+2018,3,Commercial,55 to 64
+2018,1,Outside,55 to 64
+2016,12,Outside,25 to 34
+2019,12,Outside,55 to 64
+2022,18,Outside,35 to 44
+2018,15,Outside,65+
+2011,17,Outside,25 to 34
+2012,13,Apartment,25 to 34
+2024,20,Outside,45 to 54
+2020,10,Commercial,25 to 34
+2012,18,Commercial,18 to 24
+2020,8,Commercial,35 to 44
+2011,15,Outside,65+
+2020,11,Outside,35 to 44
+2019,3,Outside,35 to 44
+2010,5,Apartment,35 to 44
+2023,6,Outside,18 to 24
+2014,14,Commercial,18 to 24
+2015,8,House,65+
+2016,3,Commercial,65+
+2011,18,House,45 to 54
+2024,19,House,35 to 44
+2023,10,Outside,65+
+2017,3,House,25 to 34
+2015,10,Apartment,45 to 54
+2023,15,Commercial,55 to 64
+2012,20,Outside,45 to 54
+2010,20,House,35 to 44
+2023,10,Commercial,35 to 44
+2010,18,Outside,45 to 54
+2023,10,Outside,35 to 44
+2011,10,Outside,65+
+2012,23,Apartment,45 to 54
+2017,12,Commercial,55 to 64
+2019,22,House,35 to 44
+2013,6,House,18 to 24
+2011,11,Outside,25 to 34
+2024,15,House,35 to 44
+2017,13,Commercial,18 to 24
+2021,19,Outside,55 to 64
+2010,3,Apartment,18 to 24
+2012,16,House,55 to 64
+2014,22,Outside,45 to 54
+2018,20,Commercial,25 to 34
+2013,11,Outside,18 to 24
+2012,7,Outside,55 to 64
+2022,4,Outside,25 to 34
+2020,9,House,25 to 34
+2016,9,House,35 to 44
+2012,19,Outside,18 to 24
+2011,2,Apartment,45 to 54
+2023,12,House,45 to 54
+2011,3,House,25 to 34
+2021,23,Outside,25 to 34
+2017,6,Apartment,35 to 44
+2018,9,House,35 to 44
+2023,4,House,55 to 64
+2023,2,House,45 to 54
+2011,23,Apartment,18 to 24
+2021,14,Apartment,35 to 44
+2022,18,Apartment,18 to 24
+2019,17,Commercial,45 to 54
+2015,23,Commercial,35 to 44
+2016,10,Commercial,25 to 34
+2014,2,Commercial,18 to 24
+2017,22,House,55 to 64
+2010,12,Commercial,45 to 54
+2023,4,House,35 to 44
+2017,1,Outside,25 to 34
+2022,10,Commercial,35 to 44
+2024,22,Outside,18 to 24
+2022,18,House,18 to 24
+2013,13,Outside,25 to 34
+2024,5,House,65+
+2013,15,House,55 to 64
+2022,14,Commercial,45 to 54
+2013,11,Commercial,65+
+2021,23,Apartment,25 to 34
+2015,22,Apartment,45 to 54
+2022,17,House,18 to 24
+2014,3,Outside,45 to 54
+2017,2,Outside,55 to 64
+2019,3,Outside,35 to 44
+2012,9,House,35 to 44
+2024,15,House,25 to 34
+2023,12,Apartment,35 to 44
+2015,14,House,65+
+2024,1,Outside,65+
+2014,17,House,35 to 44
+2017,8,House,25 to 34
+2013,20,Apartment,25 to 34
+2022,19,Apartment,65+
+2012,11,Outside,18 to 24
+2016,6,House,55 to 64
+2011,7,House,18 to 24
+2024,10,House,35 to 44
+2016,15,Apartment,55 to 64
+2020,21,Commercial,35 to 44
+2022,20,House,65+
+2013,12,Commercial,18 to 24
+2017,22,Apartment,25 to 34
+2010,0,Outside,25 to 34
+2019,4,Apartment,35 to 44
+2020,7,Commercial,35 to 44
+2015,19,House,18 to 24
+2021,14,Apartment,25 to 34
+2018,3,Commercial,65+
+2018,22,House,65+
+2018,23,Commercial,55 to 64
+2014,13,Commercial,25 to 34
+2012,8,Outside,65+
+2015,11,Apartment,25 to 34
+2012,23,Apartment,55 to 64
+2019,9,Commercial,35 to 44
+2021,12,Outside,45 to 54
+2011,4,Apartment,35 to 44
+2012,7,House,55 to 64
+2023,7,Commercial,45 to 54
+2017,0,House,35 to 44
+2019,12,Commercial,55 to 64
+2015,4,Commercial,45 to 54
+2023,2,Apartment,65+
+2020,8,Outside,18 to 24
+2023,4,Apartment,35 to 44
+2017,1,Outside,18 to 24
+2021,22,House,55 to 64
+2010,4,House,35 to 44
+2013,22,House,65+
+2017,15,Apartment,35 to 44
+2013,18,Commercial,55 to 64
+2014,16,Commercial,18 to 24
+2024,6,Commercial,25 to 34
+2011,1,Commercial,18 to 24
+2018,21,Outside,18 to 24
+2022,20,Apartment,35 to 44
+2011,2,House,25 to 34
+2011,2,Outside,18 to 24
+2012,16,Outside,65+
+2018,21,House,55 to 64
+2015,11,Apartment,45 to 54
+2013,11,Commercial,25 to 34
+2010,12,House,25 to 34
+2022,3,House,25 to 34
+2016,7,Commercial,45 to 54
+2013,14,Outside,45 to 54
+2021,22,Apartment,65+
+2018,4,Apartment,18 to 24
+2020,14,Commercial,25 to 34
+2023,22,Apartment,45 to 54
+2020,7,House,45 to 54
+2020,20,House,25 to 34
+2024,15,Outside,35 to 44
+2017,19,Outside,65+
+2014,18,House,35 to 44
+2019,16,Outside,55 to 64
+2024,12,Apartment,55 to 64
+2023,13,Outside,35 to 44
+2011,17,Commercial,18 to 24
+2016,22,Outside,35 to 44
+2023,23,Commercial,35 to 44
+2020,9,Apartment,65+
+2023,3,House,55 to 64
+2011,11,Outside,25 to 34
+2020,8,Commercial,18 to 24
+2024,17,House,25 to 34
+2012,0,House,18 to 24
+2019,13,Apartment,18 to 24
+2022,14,Commercial,18 to 24
+2021,2,House,25 to 34
+2017,13,Apartment,18 to 24
+2013,18,Outside,55 to 64
+2020,15,Apartment,25 to 34
+2021,23,Commercial,25 to 34
+2014,2,Commercial,18 to 24
+2013,21,Outside,65+
+2021,16,Outside,25 to 34
+2017,16,Commercial,25 to 34
+2017,10,Outside,25 to 34
+2021,5,Apartment,35 to 44
+2017,21,Apartment,18 to 24
+2013,18,Apartment,45 to 54
+2011,10,Outside,18 to 24
+2019,13,House,65+
+2022,5,Apartment,18 to 24
+2018,13,Apartment,35 to 44
+2010,16,House,45 to 54
+2022,8,Outside,55 to 64
+2012,15,House,35 to 44
+2020,18,Apartment,65+
+2020,15,Outside,35 to 44
+2012,19,House,35 to 44
+2016,3,House,65+
+2018,12,House,25 to 34
+2017,23,Outside,35 to 44
+2013,21,House,65+
+2015,3,House,18 to 24
+2013,9,House,25 to 34
+2019,6,Apartment,25 to 34
+2022,17,Apartment,65+
+2016,20,Apartment,25 to 34
+2018,16,Apartment,45 to 54
+2013,3,Commercial,18 to 24
+2021,15,Outside,65+
+2018,10,Outside,18 to 24
+2021,11,Commercial,25 to 34
+2016,20,House,55 to 64
+2022,11,Commercial,35 to 44
+2022,22,Commercial,35 to 44
+2023,17,House,25 to 34
+2012,8,House,55 to 64
+2022,6,Outside,25 to 34
+2018,12,House,35 to 44
+2023,8,Apartment,65+
+2013,17,Commercial,55 to 64
+2017,5,House,35 to 44
+2023,11,Commercial,18 to 24
+2015,9,Outside,45 to 54
+2016,19,Commercial,55 to 64
