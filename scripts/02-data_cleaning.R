@@ -6,28 +6,34 @@
 
 #### Workspace setup ####
 library(tidyverse)
-library(janitor)  # For cleaning column names
 
-#### Clean data ####
-# Load the raw dataset
+#### Load the raw data ####
 raw_data <- read_csv("data/raw_data/unedited_data.csv")
 
-# Clean and transform the dataset
-cleaned_data <-
-  raw_data |>
-  janitor::clean_names() |>  # Standardize column names
-  select(occ_year, occ_hour, premises_type, age_cohort) |>  # Select relevant columns
-  filter(!is.na(occ_year),  # Filter out rows where `occ_year` is missing
-         !is.na(occ_hour),  # Filter out rows where `occ_hour` is missing
-         premises_type != "Unknown",  # Filter out rows with unknown premises type
-         age_cohort != "Unknown") |>  # Filter out rows with unknown age cohort
+#### Clean, filter, and rename the data ####
+cleaned_data <- raw_data %>%
+  janitor::clean_names() %>%
+  # Filter data for years between 2014 and 2024
+  filter(occ_year >= 2014 & occ_year <= 2024) %>%
+  # Select relevant columns
+  select(occ_year, occ_hour, premises_type, age_cohort) %>%
+  # Filter out missing and unrecorded values
+  filter(!is.na(occ_year), !is.na(occ_hour), premises_type != "Not Recorded", age_cohort != "Not Recorded") %>%
+  # Rename columns to formal names
+  rename(
+    Occurred_Year = occ_year,
+    Occurred_Hour = occ_hour,
+    Premises_Type = premises_type,
+    Age_Cohort = age_cohort
+  ) %>%
+  # Make additional changes like cleaning values
   mutate(
-    occ_year = as.numeric(occ_year),  # Convert `occ_year` to numeric
-    occ_hour = as.numeric(occ_hour),  # Convert `occ_hour` to numeric
-    premises_type = str_to_title(premises_type),  # Capitalize first letters of premises types
-    age_cohort = str_replace(age_cohort, "65\\+", "65 and above")  # Standardize age cohort labels
-  ) |>
-  drop_na()  # Remove any rows with missing values
+    Occurred_Year = as.numeric(Occurred_Year),
+    Occurred_Hour = as.numeric(Occurred_Hour),
+    Premises_Type = str_to_title(Premises_Type),
+    Age_Cohort = str_replace(Age_Cohort, "65\\+", "65 and above")
+  )
 
-#### Save cleaned data ####
+#### Save the cleaned and renamed data ####
 write_csv(cleaned_data, "data/cleaned_data/cleaned_dataset.csv")
+

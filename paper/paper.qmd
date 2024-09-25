@@ -2,10 +2,9 @@
 title: "A Comprehensive Analysis of Mental Health Act Apprehensions in Toronto"
 author: "Zien Gao"
 thanks: "Code and data are available at: https://github.com/lauragao75/Analysis_About_Mental_Health_Act_Apprehensions"
-title: "A Comprehensive Analysis of Mental Health Act Apprehensions in Toronto"
 date: "September 24, 2024"
 abstract: |
-  This paper analyzes Mental Health Act (MHA) apprehensions in Toronto from 2014 to 2023, focusing on trends across age groups, apprehension types, and geographical distribution. Our analysis reveals a significant correlation between age and repeated apprehensions, with certain neighborhoods experiencing higher rates of apprehensions. These findings highlight the need for targeted mental health interventions in specific areas of Toronto.
+  This paper examines trends in Mental Health Act (MHA) apprehensions in Toronto from 2014 to 2024, focusing on the timing, location, and demographic distribution of incidents. Using detailed data on occurrence year, occurrence hour, premises type, and age cohort, we analyze patterns in MHA apprehensions across various locations and times of day. The results reveal that younger individuals, particularly those aged 25 to 34, are more likely to be apprehended during night hours in residential areas. These findings underscore the need for targeted mental health interventions that account for the time and location of crisis incidents, potentially improving resource allocation and response strategies in high-risk areas.
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -21,92 +20,129 @@ library(palmerpenguins)
 ```
 
 
-## Table of Contents
-1. Introduction
-2. Data
-3. Results
-4. Discussion
-5. Limitations and Next Steps
-6. References
 
 ## Introduction
 
-The Mental Health Act (MHA) of Ontario enables the apprehension of individuals who pose a threat to themselves or others due to mental health issues. This paper analyzes data provided by the Toronto Police Service on MHA apprehensions from 2014 to 2023. The dataset includes information such as apprehension type, age group, premises type, and geographical location.
-
-The aim of this paper is to uncover trends related to these apprehensions and identify patterns that may inform future policy decisions regarding mental health services in Toronto.
-
-The rest of the paper is structured as follows: Section 2 discusses the data used in this analysis, Section 3 presents the results, and Section 4 provides a discussion of these results. Section 5 covers limitations and next steps, while Section 6 lists references.
+Mental health crises can have a profound impact on individuals, families, and communities, often resulting in involuntary apprehensions under the Mental Health Act (MHA). MHA apprehensions are legal interventions aimed at individuals who pose a risk to themselves or others due to a mental health condition. These apprehensions serve as a key intersection between mental health services and law enforcement, raising questions about the role of public policy in addressing mental health issues (@ontario_mha). The importance of timely and appropriate mental health interventions is further underscored by research showing that mental health crises are more likely to lead to adverse outcomes when proper support mechanisms are unavailable (@who_2022). In urban centers such as Toronto, understanding the patterns of these apprehensions is crucial for developing effective mental health policies and resource allocation strategies.
+In this paper, we focus on analyzing MHA apprehensions in Toronto from 2014 to 2024. Using a dataset provided by the Toronto Police Service, we examine key features including the year and hour of occurrence, the premises type where the incident took place, and the age cohort of the individuals apprehended. Previous research has highlighted the disproportionate representation of younger individuals in mental health-related incidents (@reavley2011), and our study builds on this by exploring how factors such as time of day and location influence the likelihood of apprehension. Specifically, this paper investigates whether certain age groups, particularly younger individuals, are more prone to MHA apprehensions during specific times and in particular locations.
+Our analysis reveals that younger individuals, especially those between 25 and 34 years old, are significantly more likely to be apprehended during late-night hours and in residential areas. This finding aligns with existing literature suggesting that younger adults are more vulnerable to mental health crises that require police intervention (@gulliver2010). Additionally, our results indicate that the timing and setting of apprehensions follow identifiable patterns, which can inform future efforts to improve the availability of mental health services in high-risk areas and at high-risk times. The broader implications of this study point to the need for targeted mental health interventions and more strategic deployment of resources to better serve at-risk populations.
+The remainder of this paper is structured as follows. Section 2 discusses the dataset and the cleaning process used to prepare the data for analysis. Section 2 also includes trends in occurrence year, occurrence hour, premises type, and age cohort. Section 3 provides a discussion of these findings, comparing them to trends found in other studies. Finally, Section 4 addresses the limitations of the study.
 
 ## Data
 
-The dataset is sourced from the Toronto Police Service Open Data Portal, which contains MHA apprehensions recorded between 2014 and 2023. Each record includes variables such as the year and hour of the occurrence, the type of premises involved, the age cohort of the individual, and the type of apprehension.
+### Data Source and Background
+The dataset used in this study is drawn from the Toronto Police Service and documents all Mental Health Act (MHA) apprehensions from 2014 to 2023. Under the MHA, individuals can be involuntarily detained by law enforcement officers if they are deemed to be a danger to themselves or others due to a mental health condition (Mental Health Act, Ontario 2023). The dataset provides detailed information on:
 
-### Data Summary
+  Occurrence Year (occ_year): The year the apprehension occurred.
+  Occurrence Hour (occ_hour): The hour of the day the incident was reported.
+  Premises Type (premises_type): The location where the apprehension took place (e.g., house, apartment, commercial space).
+  Age Cohort (age_cohort): The age group of the apprehended individual (e.g., 18 to 24, 25 to 34).
 
-Table 1 provides a summary of the cleaned dataset, focusing on the number of occurrences per year and premises type.
+The data was extracted from the Open Data Toronto portal using the opendatatoronto package in R (@opendatatoronto). The analysis was conducted using the open-source statistical programming language R (@R-core). Several R libraries were employed throughout the process: tidyverse for data manipulation and visualization (@tidyverse), janitor for cleaning and formatting the dataset (@janitor), knitr for creating tables (@knitr), dplyr for data transformation (@dplyr), and lubridate for managing date and time data (@lubridate). The visualizations and graphics were produced using the ggplot2 package (@ggplot2). This dataset was chosen due to its comprehensive coverage of MHA apprehensions, enabling us to explore temporal and spatial patterns of such incidents across Toronto. Given the sensitive nature of mental health data, all individual identifiers have been anonymized to protect privacy.
 
-```{r}
+
+### Data Cleaning
+Before analysis, the raw dataset underwent several cleaning and preprocessing steps to ensure its integrity and usability. The data was first inspected for missing or erroneous entries, especially in key variables such as occurrence year, occurrence hour, premises type, and age cohort. Any rows containing missing or ambiguous values were removed to maintain the consistency and accuracy of the analysis. In addition, categorical variables such as age cohort and premises type were standardized to ensure consistency in naming conventions across all entries. The resulting cleaned dataset was then used to generate the descriptive statistics and visualizations that form the foundation of this analysis.
+
+
+### Summary of Variables
+The primary variables of interest in this study are the year of occurrence, hour of occurrence, premises type, and age cohort of the individuals involved. Table 1 provides a sample of the summary of these key variables, highlighting the temporal and spatial distribution of MHA apprehensions as well as the age profile of those apprehended.
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
 # Load necessary libraries
 library(tidyverse)
 library(knitr)
 
-# Summarizing the dataset
-data_summary <- cleaned_data %>%
-  group_by(occ_year, premises_type) %>%
-  summarize(count = n())
 
-# Display the summary in a table
-kable(data_summary, caption = "Table 1: Number of Apprehensions by Year and Premises Type")
-```
+# Load the cleaned dataset
+cleaned_data <- read_csv("../data/cleaned_data/cleaned_dataset.csv")
 
-Visualization of Key Trends
-Figure 1 below shows the distribution of apprehensions by age cohort and premises type.
+# Summary of key variables
+summary_table <- cleaned_data %>%
+  group_by(Occurred_Year, Occurred_Hour, Premises_Type, Age_Cohort) %>%
+  summarise(count = n(), .groups = 'drop')
 
-```{r}
-library(ggplot2)
+# Display the first 10 rows as a sample
+sample_table <- head(summary_table, 20)
 
-# Plotting the distribution of apprehensions by age cohort and premises type
-ggplot(cleaned_data, aes(x = premises_type, fill = age_cohort)) +
-  geom_bar(position = "dodge") +
-  labs(title = "Apprehensions by Premises Type and Age Cohort",
-       x = "Premises Type", y = "Count", fill = "Age Cohort")
-```
+# Show the sample table
+kable(sample_table, caption = "Table 1: Sample of the Key Variables in the MHA Apprehensions Dataset")
 
-Results
-Apprehensions by Year
-Table 2 shows the distribution of apprehensions across the years from 2014 to 2023. The results indicate an increasing trend in apprehensions, especially after 2017, suggesting a growing need for mental health interventions.
-
-```{r}
-# Summarizing the dataset with grouped output suppressed
-data_summary <- cleaned_data %>%
-  group_by(occ_year, premises_type) %>%
-  summarise(count = n(), .groups = "drop")
-
-# Display the summary in a table
-kable(data_summary, caption = "Table 1: Number of Apprehensions by Year and Premises Type")
 
 ```
 
-Apprehensions by Age Cohort
-Analysis of the age cohorts shows that individuals between 25 and 34 years are more frequently apprehended than other age groups. Figure 2 visualizes this trend across different premises types.
+Table 1 shows that MHA apprehensions have been recorded across a wide range of premises types, with residential locations accounting for a significant proportion of the total incidents. The data also indicates that younger age cohorts, particularly individuals aged 25 to 34, are over represented in these apprehensions, which raises important questions about the vulnerability of this demographic to mental health crises.
 
-```{r}
-# Plot apprehensions by age cohort
-ggplot(cleaned_data, aes(x = age_cohort, fill = premises_type)) +
-  geom_bar(position = "dodge") +
-  labs(title = "Apprehensions by Age Cohort and Premises Type",
-       x = "Age Cohort", y = "Count", fill = "Premises Type")
+
+### Visualizations of the Data
+In order to better understand the trends and patterns present in the dataset, we present several visualizations that provide a detailed look at the distribution of MHA apprehensions over time, by location, and across different age groups.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+# Plot distribution of apprehensions by year
+ggplot(cleaned_data, aes(x = Occurred_Year)) +
+  geom_bar(fill = "steelblue") +
+  labs(title = "Figure 1: Distribution of Apprehensions by Year",
+       x = "Year", y = "Number of Apprehensions") +
+  theme_minimal()
+
 ```
-Discussion
-The data suggests that MHA apprehensions in Toronto are concentrated in particular age groups and neighborhoods. Individuals aged 25-34 make up the largest portion of apprehensions, particularly in residential areas. These trends highlight potential areas for targeted mental health services and preventive care.
+Figure 1 illustrates the temporal distribution of MHA apprehensions from 2014 to 2024. The data shows a steady increase in apprehensions over this period, with a notable rise beginning in 2020. This upward trend may reflect broader social and economic pressures, or changes in law enforcement practices in response to the mental health needs of the population. Further research could explore whether the increase in apprehensions correlates with specific public health initiatives or external events, such as economic downturns or the COVID-19 pandemic.
 
-Limitations and Next Steps
-Several limitations should be noted in this analysis. First, the data may include repeat apprehensions of the same individual, which could skew results. Additionally, the geographical data has been intentionally obfuscated to protect privacy, which may limit the accuracy of spatial analyses.
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+# Plot apprehensions by premises type
+ggplot(cleaned_data, aes(x = Premises_Type)) +
+  geom_bar(fill = "darkgreen") +
+  labs(title = "Figure 2: Apprehensions by Premises Type",
+       x = "Premises Type", y = "Number of Apprehensions") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+Figure 2 provides a breakdown of MHA apprehensions by premises type. As expected, residential locations dominate the dataset, suggesting that mental health crises are most likely to occur in familiar environments.
 
-Future research should aim to combine this dataset with healthcare or social service data to provide a more comprehensive view of mental health needs in Toronto.
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+# Plot apprehensions by age cohort and occurrence hour
+ggplot(cleaned_data, aes(x = Occurred_Hour, fill = Age_Cohort)) +
+  geom_histogram(binwidth = 1, color = "black") +
+  labs(title = "Figure 3: Distribution of Apprehensions by Age Cohort and Hour",
+       x = "Hour of the Day", y = "Number of Apprehensions", fill = "Age Cohort") +
+  theme_minimal()
+```
+Figure 3 illustrates the distribution of Mental Health Act (MHA) apprehensions across different hours of the day, segmented by age cohort. The x-axis represents the hour of the day (from 0 to 23), while the y-axis shows the total number of apprehensions. Each age cohort is color-coded, ranging from individuals aged 18 to 24 to those aged 65 and above.
 
-Reference
-```{r}
+The data reveals several important patterns. Apprehensions increase sharply during the early morning hours, peaking around noon and again between 8 PM and midnight. The 25 to 34 age cohort, represented by the green color, accounts for the largest share of apprehensions across all time periods, particularly during the late evening and nighttime hours. This suggests that individuals in this age group are more prone to mental health crises during times when typical social or medical support services may be less accessible.
+
+The consistent rise in apprehensions during nighttime hours (8 PM to midnight) across all age cohorts indicates that mental health crises tend to escalate during periods of reduced public activity. These findings have significant implications for emergency mental health services, highlighting the need for increased availability of crisis intervention services during late hours to address the needs of younger populations more effectively.
+
+
+### Conclusion of Data Section
+In conclusion, the dataset provides a comprehensive view of MHA apprehensions in Toronto, offering valuable insights into the temporal, spatial, and demographic dimensions of mental health crises in the city. Table 1 summarizes the key variables, while Figures 1-3 offer a visual representation of the patterns observed in the data. These findings serve as the foundation for the more detailed analysis presented in the following sections.
+
+
+## Discussion
+
+### Summary of Findings
+This paper analyzed Mental Health Act (MHA) apprehensions in Toronto from 2014 to 2024, focusing on key variables such as occurrence year, occurrence hour, premises type, and age cohort. The analysis demonstrated that younger individuals, particularly those aged 25 to 34, are disproportionately represented in the data. Furthermore, the analysis revealed that most apprehensions occur during late-night and early morning hours, particularly in residential locations. These findings provide valuable insights into the demographics, timing, and geography of MHA apprehensions, which can inform future mental health policy and interventions.
+
+
+### Temporal Patterns and Their Implications
+The data highlights that MHA apprehensions have increased over time, with a sharp rise starting around 2017 and peaking in 2021. This finding suggests that mental health crises have become more prevalent, potentially due to a combination of factors such as increasing societal stressors, economic challenges, and the effects of the COVID-19 pandemic. Previous research has shown that economic downturns and public health crises tend to exacerbate mental health problems (@lancet_2018), which may explain the uptick in apprehensions observed in the data. Additionally, the concentration of incidents during nighttime hours suggests that crises may escalate when social and medical services are less accessible, indicating the need for 24-hour mental health support services.
+
+
+### Spatial Distribution of Apprehensions
+The analysis also showed that the majority of MHA apprehensions occur in residential settings, such as houses and apartments. Residential settings may also offer fewer immediate intervention resources compared to commercial or public spaces, making it more likely that a crisis escalates to the point where law enforcement is involved. These findings underscore the need for more in-home mental health support services, particularly for younger populations.
+
+
+### Demographic Patterns: The Role of Age
+The over representation of individuals aged 25 to 34 in MHA apprehensions is perhaps the most significant finding of this study. This age group, often referred to as the "young adult" demographic, is known to experience high levels of mental health-related stress due to the transition into adulthood, economic pressures, and social challenges (@gulliver2010). The data suggests that younger adults may be more vulnerable to mental health crises that necessitate police intervention, particularly during high-risk times such as late at night. This raises important questions about the adequacy of mental health services targeted at this age group. Expanding mental health outreach programs and increasing awareness among young adults about available mental health resources could help reduce the need for MHA apprehensions in this population.
+
+
+## Limitations of the Study
+While this study provides valuable insights into the patterns of MHA apprehensions in Toronto, several limitations must be acknowledged. First, the dataset does not contain information about the underlying causes of each apprehension, making it difficult to determine whether certain types of crises (e.g., substance abuse, economic hardship, or psychiatric disorders) are more prevalent in certain locations or age groups. Second, the anonymized nature of the dataset prevents any longitudinal analysis that could track repeat apprehensions of the same individuals. It is possible that some individuals may have been apprehended multiple times during the study period, which could skew the results. Lastly, the focus on police-reported data introduces a potential bias, as not all mental health crises result in police intervention. Many crises are managed by healthcare professionals or family members, meaning that the dataset may underrepresent the true prevalence of mental health crises in Toronto.
+
+
+## Reference
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
 # Reference list in BibTeX format
 
 ```
