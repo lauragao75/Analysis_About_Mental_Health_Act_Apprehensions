@@ -18,6 +18,8 @@ This repository contains the code and data analysis for a comprehensive study of
 Please note that the raw and cleaned data files are large, and GitHub may not be able to display them directly. To view or download these files, please clone the repository and access the files locally:
 ```bash
 git clone https://github.com/lauragao75/Analysis_About_Mental_Health_Act_Apprehensions
+```
+
 
 ## Statement on LLM usage
 
