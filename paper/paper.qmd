@@ -1,5 +1,5 @@
 ---
-title: "A Comprehensive Analysis of Mental Health Act Apprehensions in Toronto"
+title: "Mental Health Crises in Toronto: Trends in Age, Timing, and Location of Apprehensions (2014-2024)"
 author: "Zien Gao"
 thanks: "Code and data are available at: https://github.com/lauragao75/Analysis_About_Mental_Health_Act_Apprehensions"
 date: "September 24, 2024"
@@ -24,19 +24,23 @@ library(palmerpenguins)
 ## Introduction
 
 Mental health crises can have a profound impact on individuals, families, and communities, often resulting in involuntary apprehensions under the Mental Health Act (MHA). MHA apprehensions are legal interventions aimed at individuals who pose a risk to themselves or others due to a mental health condition. These apprehensions serve as a key intersection between mental health services and law enforcement, raising questions about the role of public policy in addressing mental health issues (@ontario_mha). The importance of timely and appropriate mental health interventions is further underscored by research showing that mental health crises are more likely to lead to adverse outcomes when proper support mechanisms are unavailable (@who_2022). In urban centers such as Toronto, understanding the patterns of these apprehensions is crucial for developing effective mental health policies and resource allocation strategies.
+
 In this paper, we focus on analyzing MHA apprehensions in Toronto from 2014 to 2024. Using a dataset provided by the Toronto Police Service, we examine key features including the year and hour of occurrence, the premises type where the incident took place, and the age cohort of the individuals apprehended. Previous research has highlighted the disproportionate representation of younger individuals in mental health-related incidents (@reavley2011), and our study builds on this by exploring how factors such as time of day and location influence the likelihood of apprehension. Specifically, this paper investigates whether certain age groups, particularly younger individuals, are more prone to MHA apprehensions during specific times and in particular locations.
+
 Our analysis reveals that younger individuals, especially those between 25 and 34 years old, are significantly more likely to be apprehended during late-night hours and in residential areas. This finding aligns with existing literature suggesting that younger adults are more vulnerable to mental health crises that require police intervention (@gulliver2010). Additionally, our results indicate that the timing and setting of apprehensions follow identifiable patterns, which can inform future efforts to improve the availability of mental health services in high-risk areas and at high-risk times. The broader implications of this study point to the need for targeted mental health interventions and more strategic deployment of resources to better serve at-risk populations.
-The remainder of this paper is structured as follows. Section 2 discusses the dataset and the cleaning process used to prepare the data for analysis. Section 2 also includes trends in occurrence year, occurrence hour, premises type, and age cohort. Section 3 provides a discussion of these findings, comparing them to trends found in other studies. Finally, Section 4 addresses the limitations of the study.
+
+The remainder of this paper is structured as follows. Section 2 discusses the dataset and the cleaning process used to prepare the data for analysis, as well as the trends in occurrence year, occurrence hour, premises type, and age cohort. Section 3 provides a discussion of these findings, comparing them to trends found in other studies. Finally, Section 4 addresses the limitations of the study.
+
 
 ## Data
 
 ### Data Source and Background
-The dataset used in this study is drawn from the Toronto Police Service and documents all Mental Health Act (MHA) apprehensions from 2014 to 2023. Under the MHA, individuals can be involuntarily detained by law enforcement officers if they are deemed to be a danger to themselves or others due to a mental health condition (Mental Health Act, Ontario 2023). The dataset provides detailed information on:
+The dataset used in this study is drawn from the Toronto Police Service and documents all Mental Health Act (MHA) apprehensions from 2014 to 2023. The dataset used in this paper was chosen because it provides detailed, granular data specific to MHA apprehensions in Toronto, including the necessary variables for temporal, spatial, and demographic analysis. Other datasets lacked this combination of specificity and detail, making them unsuitable for the study's goals. Under the MHA, individuals can be involuntarily detained by law enforcement officers if they are deemed to be a danger to themselves or others due to a mental health condition (Mental Health Act, Ontario 2023).The dataset provides detailed information on:
 
-  Occurrence Year (occ_year): The year the apprehension occurred.
-  Occurrence Hour (occ_hour): The hour of the day the incident was reported.
-  Premises Type (premises_type): The location where the apprehension took place (e.g., house, apartment, commercial space).
-  Age Cohort (age_cohort): The age group of the apprehended individual (e.g., 18 to 24, 25 to 34).
+- **Occurrence Year (`occ_year`)**: This variable represents the year in which the apprehension occurred (measured in calendar years, e.g., 2014, 2015).
+- **Occurrence Hour (`occ_hour`)**: This variable records the time of day when the incident was reported, measured in 24-hour format (0–23), where 0 represents midnight and 23 represents 11 PM.
+- **Premises Type (`premises_type`)**: This categorical variable describes the location where the apprehension took place. Examples include "House," "Apartment," or "Commercial" (no numerical unit associated).
+- **Age Cohort (`age_cohort`)**: This variable indicates the age group of the apprehended individual, recorded in ranges of years (e.g., "18 to 24," "25 to 34").
 
 The data was extracted from the Open Data Toronto portal using the opendatatoronto package in R (@opendatatoronto). The analysis was conducted using the open-source statistical programming language R (@R-core). Several R libraries were employed throughout the process: tidyverse for data manipulation and visualization (@tidyverse), janitor for cleaning and formatting the dataset (@janitor), knitr for creating tables (@knitr), dplyr for data transformation (@dplyr), and lubridate for managing date and time data (@lubridate). The visualizations and graphics were produced using the ggplot2 package (@ggplot2). This dataset was chosen due to its comprehensive coverage of MHA apprehensions, enabling us to explore temporal and spatial patterns of such incidents across Toronto. Given the sensitive nature of mental health data, all individual identifiers have been anonymized to protect privacy.
 
@@ -104,7 +108,7 @@ Figure 2 provides a breakdown of MHA apprehensions by premises type. As expected
 # Plot apprehensions by age cohort and occurrence hour
 ggplot(cleaned_data, aes(x = Occurred_Hour, fill = Age_Cohort)) +
   geom_histogram(binwidth = 1, color = "black") +
-  labs(title = "Figure 3: Distribution of Apprehensions by Age Cohort and Hour",
+  labs(title = "Figure 3: Distribution of Apprehensions by \nAge Cohort and Hour",
        x = "Hour of the Day", y = "Number of Apprehensions", fill = "Age Cohort") +
   theme_minimal()
 ```
@@ -140,6 +144,8 @@ The over representation of individuals aged 25 to 34 in MHA apprehensions is per
 ## Limitations of the Study
 While this study provides valuable insights into the patterns of MHA apprehensions in Toronto, several limitations must be acknowledged. First, the dataset does not contain information about the underlying causes of each apprehension, making it difficult to determine whether certain types of crises (e.g., substance abuse, economic hardship, or psychiatric disorders) are more prevalent in certain locations or age groups. Second, the anonymized nature of the dataset prevents any longitudinal analysis that could track repeat apprehensions of the same individuals. It is possible that some individuals may have been apprehended multiple times during the study period, which could skew the results. Lastly, the focus on police-reported data introduces a potential bias, as not all mental health crises result in police intervention. Many crises are managed by healthcare professionals or family members, meaning that the dataset may underrepresent the true prevalence of mental health crises in Toronto.
 
+
+\pagebreak
 
 ## Reference
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
